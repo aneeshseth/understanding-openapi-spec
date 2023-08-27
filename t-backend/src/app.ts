@@ -11,6 +11,7 @@ app.use("/docs", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => {
     swaggerUi.generateHTML(await import("../build/swagger.json"))
   );
 });
+
 app.use(
   urlencoded({
     extended: true,
